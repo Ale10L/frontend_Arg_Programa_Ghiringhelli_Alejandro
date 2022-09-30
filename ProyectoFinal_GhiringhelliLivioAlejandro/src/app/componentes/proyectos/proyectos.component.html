@@ -1,0 +1,26 @@
+<div class="row">
+  <h1>Proyectos</h1>
+  <div class="contenedor">
+    <button type="button" class="btn btn-outline-light" routerLink="/agregarproyecto" *ngIf="isLoged"> Agregar proyecto</button>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Proyecto</th>
+          <th scope="col">Descripción</th>
+          <th scope="col">Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let proyecto of proyectos">
+          <th scope="row">{{proyecto.id}}</th>
+          <td>{{proyecto.nombre}}</td>
+          <td>{{proyecto.descripcion}}</td>
+          <td><a [href]="proyecto.enlace_proyecto">{{proyecto.enlace_proyecto}}</a></td>
+          <td *ngIf="isLoged"><button type="button" class="btn btn-light" routerLink="/editarproyecto/{{proyecto.id}}"><i class="bi bi-pencil"></i></button></td>
+            <td *ngIf="isLoged"><button type="button" class="btn btn-danger" routerLink="/borrarproyecto/{{proyecto.id}}" (click)="eliminar(proyecto.id)"><i class="bi bi-trash"></i></button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

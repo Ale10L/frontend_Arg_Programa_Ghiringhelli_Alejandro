@@ -1,0 +1,22 @@
+<div>
+  <!-- Linkedin -->
+  <a class="btn btn-outline-light" [href]="sanitize(persona.enlace_linkedin)" target="_blank" role="button">
+    <i class="bi bi-linkedin"></i>
+  </a>
+  <!-- Github -->
+  <a class="btn btn-outline-light" [href]="sanitize(persona.enlace_github)" target="_blank" role="button">
+    <i class="bi bi-github"></i>
+  </a>
+
+  <!-- Instagram -->
+  <a class="btn btn-outline-light" [href]="sanitize(persona.enlace_instagram)" target="_blank" role="button">
+    <i class="bi bi-instagram"></i>
+  </a>
+
+  <!-- Whatsapp -->
+  <a class="btn btn-outline-light" [href]="sanitize(persona.enlace_whatsapp)" target="_blank" role="button" >
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLoged">INGRESO</button>
+  <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLoged">CERRAR SESIÓN</button>
+</div>

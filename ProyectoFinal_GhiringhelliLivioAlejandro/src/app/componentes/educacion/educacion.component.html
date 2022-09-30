@@ -1,0 +1,28 @@
+<div class="row">
+  <h1>Formación Académica</h1>
+  <div>
+    <button type="button" class="btn btn-outline-light" routerLink="/agregaredu" *ngIf="isLoged"> Agregar educación</button>
+    <div>
+      <table class="table">
+        <thead class="thead-light">
+          <th scope="col">ID</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Lugar</th>
+          <th scope="col">Inicio</th>
+          <th scope="col">Finalización</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let edu of educacion">
+            <th scope="row">{{edu.id}}</th>
+            <td>{{edu.nombre}}</td>
+            <td>{{edu.lugar}}</td>
+            <td>{{getYearInicio(edu.fecha_inicio)}}</td>
+            <td>{{getYearFin(edu.fecha_fin)}}</td>
+            <td *ngIf="isLoged"><button type="button" class="btn btn-light" routerLink="/editaredu/{{edu.id}}"><i class="bi bi-pencil"></i></button></td>
+            <td *ngIf="isLoged"><button type="button" class="btn btn-danger" routerLink="/borraredu/{{edu.id}}" (click)="eliminar(edu.id)"><i class="bi bi-trash"></i></button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

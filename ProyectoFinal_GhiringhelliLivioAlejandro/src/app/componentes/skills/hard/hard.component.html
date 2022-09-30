@@ -1,0 +1,18 @@
+<div class="row">
+  <h1>Hard Skills</h1>
+  <button type="button" class="btn btn-outline-light" routerLink="/agregarskillh" *ngIf="isLoged"> Agregar
+    skill</button>
+  <div class="col-sm-3 col-md-3 col-lg-3" *ngFor="let hskill of skills">
+    <circle-progress [percent]="hskill.porcentaje" [radius]="100" [subtitle]="hskill.nombre" [subtitleFontSize]="'15px'"
+      [outerStrokeWidth]="16" [innerStrokeWidth]="8" [outerStrokeColor]="'#4b79a1'" [innerStrokeColor]="'#283E51'"
+      [animation]="true" [animationDuration]="300">
+    </circle-progress>
+    <br />
+    <div id="botonera">
+      <button type="button" class="btn btn-light" routerLink="/editarskillh/{{hskill.id}}" *ngIf="isLoged"><i
+          class="bi bi-pencil"></i></button>
+      <button type="button" class="btn btn-danger" routerLink="/borrarskillh/{{hskill.id}}"
+        (click)="eliminar(hskill.id)" *ngIf="isLoged"><i class="bi bi-trash"></i></button>
+    </div>
+  </div>
+</div>

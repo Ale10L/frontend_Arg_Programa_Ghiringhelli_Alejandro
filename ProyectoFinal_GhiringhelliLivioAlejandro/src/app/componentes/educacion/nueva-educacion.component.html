@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div>
+      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required="" /><span
+            class="barra"></span>
+          <label for="nombre">Nombre</label>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="lugar" name="lugar" [(ngModel)]="lugar" required="" /><span
+            class="barra"></span>
+          <label for="lugar">Lugar</label>
+        </div>
+        <div class="form-group">
+          <input matInput [matDatepicker]="picker_inicio" class="form-control" id="fecha_inicio" name="fecha_inicio"
+            [(ngModel)]="fecha_inicio" required="" /><span class="barra"></span>
+          <mat-hint id="fecha_inicio_label" for="fecha_inicio"><b>Fecha de inicio</b></mat-hint>
+          <mat-datepicker-toggle matSuffix [for]="picker_inicio"></mat-datepicker-toggle>
+          <mat-datepicker #picker_inicio></mat-datepicker>
+        </div>
+        <div class="form-group">
+          <input matInput [matDatepicker]="picker_fin" class="form-control" id="fecha_fin" name="fecha_fin"
+            [(ngModel)]="fecha_fin" /><span class="barra"></span>
+          <mat-hint id="fecha_finalizacion_label" for="fecha_finalizacion"><b>Fecha de finalización</b></mat-hint>
+          <mat-datepicker-toggle matSuffix [for]="picker_fin"></mat-datepicker-toggle>
+          <mat-datepicker #picker_fin></mat-datepicker>
+        </div>
+        <div id="botonera">
+          <button class="btn btn-primary">Agregar</button>
+          <button class="btn btn-danger">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

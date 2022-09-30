@@ -1,0 +1,17 @@
+<div class="row">
+  <h1>Soft Skills</h1>
+  <button type="button" class="btn btn-outline-light" routerLink="/agregarskills" *ngIf="isLoged"> Agregar
+    skill</button>
+  <div class="col-sm-3 col-md-3 col-lg-3" *ngFor="let sskill of skills">
+    <circle-progress [percent]="sskill.porcentaje" [radius]="100" [subtitle]="sskill.nombre" [subtitleFontSize]="'15px'"
+      [outerStrokeWidth]="16" [innerStrokeWidth]="8" [outerStrokeColor]="'#3297E2'" [innerStrokeColor]="'#62B3EE'"
+      [animation]="true" [animationDuration]="300">
+    </circle-progress>
+    <div id="botonera">
+      <button type="button" class="btn btn-light" routerLink="/editarskills/{{sskill.id}}" *ngIf="isLoged"><i
+          class="bi bi-pencil"></i></button>
+      <button type="button" class="btn btn-danger" routerLink="/borrarskills/{{sskill.id}}"
+        (click)="eliminar(sskill.id)" *ngIf="isLoged"><i class="bi bi-trash"></i></button>
+    </div>
+  </div>
+</div>

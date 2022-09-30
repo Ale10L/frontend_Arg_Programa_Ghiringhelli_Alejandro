@@ -1,0 +1,83 @@
+.row {
+  padding: 30px;
+  background: #8E0E00;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #1F1C18, #8E0E00);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+div {
+
+  text-align: center;
+  color:#fefefe;
+
+}
+
+#fotoperfil {
+  position: absolute;
+  width: 15%;
+  border-radius: 100%;
+  box-shadow: 3px 3px 3px #fefefe;
+  left: 3%;
+  top: 500px;
+}
+
+#nombre {
+  margin-top: 80%;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Georgia;
+  margin-left: 17%;
+}
+
+#titulo {
+  font-weight: bolder;
+  font-size: 17px;
+  font-family: Georgia;
+  margin-left: 10%;
+}
+
+#aboutme {
+  font-family: Georgia;
+  text-align: center;
+  font-size: 15px;
+  margin-left: 5%;
+  margin-bottom: 10%;
+  text-align: center;
+  border-style: inherit;
+}
+
+/*@media(min-width: 576px) {
+  #fotoperfil {
+    position: absolute;
+    width: 15%;
+    border-radius: 100%;
+    box-shadow: 3px 3px 3px grey;
+    left: 40%;
+    top: 630px;
+  }
+}
+
+@media(max-width: 575px) {
+  #fotoperfil {
+    position: absolute;
+    width: 15%;
+    border-radius: 100%;
+    box-shadow: 3px 3px 3px grey;
+    left: 40%;
+    top: 630px;
+  }
+}
+
+
+#columna-foto {
+  height: 50px;
+}
+
+#columna-nombre {
+  text-align: center;
+}
+*/
+
